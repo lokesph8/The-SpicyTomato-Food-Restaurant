@@ -121,6 +121,7 @@
     .navbar-menu a:active {
         outline: none;
         box-shadow: none;
+        border-bottom: none;
     }
 
     .navbar-menu li,
