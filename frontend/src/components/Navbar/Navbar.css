@@ -97,5 +97,71 @@
 @media (max-width:750px){
     .navbar-menu{
         display: none;
+        position: absolute;
+        top: 70px; /* adjust as per navbar height */
+        
+        right: 0;
+        width: 30%;
+        background-color: white;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        z-index: 100;
     }
+    .navbar-menu.active{
+        display: flex;
+    }
+    .navbar-menu a{
+        text-align: left; /* keep links aligned to left inside dropdown */
+    }
+
+    .navbar-menu a:focus,
+    .navbar-menu a:active {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .navbar-menu li,
+    .navbar-menu a,
+    .navbar-menu .active {
+        border-bottom: none;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .hamburger .bar{
+        width: 25px;
+        height: 3px;
+        background-color: #49557e;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+     .hamburger.open .bar:nth-child(1){
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.open .bar:nth-child(3){
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .navbar-right{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    
 }
